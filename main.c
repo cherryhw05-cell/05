@@ -19,20 +19,29 @@
 //     return 0;
 // }
 
-// 대면 실습 04
+// 대면 실습 05
 int main(void) {
-    int number = 0;  
-    int sum = 0; 
-    
-    printf("정수를 입력하세요 : ");
-    scanf("%d", &number);
+    int number1, number2;
+    char operator;
 
-    for (int i = 1; i <= number; i++) {
-        sum += i;
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &number1, &operator, &number2);
 
+    if (operator == '+') {
+        printf("%d + %d = %d\n", number1, number2, number1 + number2);
+    } else if (operator == '-') {
+        printf("%d - %d = %d\n", number1, number2, number1 - number2);
+    } else if (operator == '*') {
+        printf("%d * %d = %d\n", number1, number2, number1 * number2);
+    } else if (operator == '/') {
+        if (number2 != 0) {
+            printf("%d / %d = %.2f\n", number1, number2, (float)number1 / number2);
+        } else {
+            printf("Error: Division by zero is not allowed.\n");
+        }
+    } else {
+        printf("Error: 연산자가 잘못되었음.\n");
     }
-
-    printf("1부터 %d까지의 합은 %d\n", number, sum);
-
+    
     return 0;
 }
