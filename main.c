@@ -19,18 +19,18 @@
 //     return 0;
 // }
 
-// 대면 실습
+// 대면 실습 02
 int main() {
     int number;
     printf("정수 하나를 입력하세요 : ");
     scanf("%d", &number);
 
     if (number > 0)
-        printf("입력한 정수는 양수입니다.\n");
+        printf("절댓값은 %d입니다.\n", number);
     else if (number < 0)
-        printf("입력한 정수는 음수입니다.\n");
+        printf("절댓값은 %d입니다.\n", -number);
     else
-        printf("입력한 정수는 0입니다.\n");
+        printf("절댓값은 0입니다.\n");
 
     return 0;
 }
