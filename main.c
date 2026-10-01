@@ -19,29 +19,27 @@
 //     return 0;
 // }
 
-// 대면 실습 05
+// 대면 실습 06
 int main(void) {
-    int number1, number2;
-    char operator;
+    int number;
+    int answer = 60;
+    int count = 0;
 
-    printf("enter the calculation : ");
-    scanf("%d %c %d", &number1, &operator, &number2);
+    do {
+        printf("정답 숫자를 맞춰보세요! : ");
+        scanf("%d", &number);
+        count++;
 
-    if (operator == '+') {
-        printf("%d + %d = %d\n", number1, number2, number1 + number2);
-    } else if (operator == '-') {
-        printf("%d - %d = %d\n", number1, number2, number1 - number2);
-    } else if (operator == '*') {
-        printf("%d * %d = %d\n", number1, number2, number1 * number2);
-    } else if (operator == '/') {
-        if (number2 != 0) {
-            printf("%d / %d = %.2f\n", number1, number2, (float)number1 / number2);
-        } else {
-            printf("Error: Division by zero is not allowed.\n");
-        }
-    } else {
-        printf("Error: 연산자가 잘못되었음.\n");
-    }
-    
+        if (number < answer)
+            printf("입력 숫자가 정답보다 작음!\n");
+        else if (number > answer)
+            printf("입력 숫자가 정답보다 큼!\n");
+
+    } while (number != answer);
+
+    printf("정답!\n");
+    printf("시도 횟수: %d\n", count);
+
     return 0;
 }
+
