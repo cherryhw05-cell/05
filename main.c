@@ -19,18 +19,20 @@
 //     return 0;
 // }
 
-// 대면 실습 02
-int main() {
-    int number;
-    printf("정수 하나를 입력하세요 : ");
-    scanf("%d", &number);
+// 대면 실습 03
+int main(void) {
+    int number = 0;   
+    char character;
 
-    if (number > 0)
-        printf("절댓값은 %d입니다.\n", number);
-    else if (number < 0)
-        printf("절댓값은 %d입니다.\n", -number);
-    else
-        printf("절댓값은 0입니다.\n");
+    printf("input a string : ");
+
+    while ((character = getchar()) != '\n') {
+        if (character >= '0' && character <= '9') {
+            number++;
+        }
+    }
+
+    printf("The number of digits is : %d\n", number);
 
     return 0;
 }
