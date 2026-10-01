@@ -19,20 +19,20 @@
 //     return 0;
 // }
 
-// 대면 실습 03
+// 대면 실습 04
 int main(void) {
-    int number = 0;   
-    char character;
+    int number = 0;  
+    int sum = 0; 
+    
+    printf("정수를 입력하세요 : ");
+    scanf("%d", &number);
 
-    printf("input a string : ");
+    for (int i = 1; i <= number; i++) {
+        sum += i;
 
-    while ((character = getchar()) != '\n') {
-        if (character >= '0' && character <= '9') {
-            number++;
-        }
     }
 
-    printf("The number of digits is : %d\n", number);
+    printf("1부터 %d까지의 합은 %d\n", number, sum);
 
     return 0;
 }
